@@ -31,5 +31,16 @@ target 'bimEduTel' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+        
+        cflags = config.build_settings['OTHER_CFLAGS'] || '$(inherited)'
+        config.build_settings['OTHER_CFLAGS'] = "#{cflags} -Wno-non-modular-include-in-framework-module"
+
+        cxxflags = config.build_settings['OTHER_CPLUSPLUSFLAGS'] || '$(inherited)'
+        config.build_settings['OTHER_CPLUSPLUSFLAGS'] = "#{cxxflags} -Wno-non-modular-include-in-framework-module"
+      end
+    end
   end
 end

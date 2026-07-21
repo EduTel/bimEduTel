@@ -2310,7 +2310,7 @@ PODS:
     - React-perflogger (= 0.81.0)
     - React-utils (= 0.81.0)
     - SocketRocket
-  - RNGestureHandler (3.1.0):
+  - RNGestureHandler (2.32.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2338,7 +2338,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - RNScreens (4.26.2):
+  - RNScreens (4.24.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2365,10 +2365,10 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNScreens/common (= 4.26.2)
+    - RNScreens/common (= 4.24.0)
     - SocketRocket
     - Yoga
-  - RNScreens/common (4.26.2):
+  - RNScreens/common (4.24.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2641,7 +2641,7 @@ SPEC CHECKSUMS:
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
   hermes-engine: e7491a2038f2618c8cd444ed411a6deb350a3742
-  RCT-Folly: 59ec0ac1f2f39672a0c6e6cecdd39383b764646f
+  RCT-Folly: 846fda9475e61ec7bcbf8a3fe81edfcaeb090669
   RCTDeprecation: 0735ab4f6b3ec93a7f98187b5da74d7916e2cf4c
   RCTRequired: 8fcc7801bfc433072287b0f24a662e2816e89d0c
   RCTTypeSafety: 2b2be515d6b968bcba7a68c4179d8199bd8c9b58
@@ -2705,11 +2705,11 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: c91900fa724baee992f01c05eeb4c9e01a807f78
   ReactCodegen: a55799cae416c387aeaae3aabc1bc0289ac19cee
   ReactCommon: 116d6ee71679243698620d8cd9a9042541e44aa6
-  RNGestureHandler: 00c531b36b1a9916fc2ce895a7947f9b8b581426
-  RNScreens: 40460e1c9a818613c7004427f953005971f314fc
+  RNGestureHandler: 23ba02687de64120ae049908ac9d4e2f8ae6468a
+  RNScreens: 7f643ee0fd1407dc5085c7795460bd93da113b8f
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 00013dd9cde63a2d98e8002fcc4f5ddb66c10782
 
-PODFILE CHECKSUM: 2a315f60fe1b2d1ee27d4fbd470752f32c3d26df
+PODFILE CHECKSUM: 588034a031dfdcabcdcd52200b2456d0e58a272b
 
 COCOAPODS: 1.16.2
