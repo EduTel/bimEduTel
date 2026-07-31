@@ -4,8 +4,6 @@ import {
   StyleSheet,
   FlatList,
   ActivityIndicator,
-  RefreshControl,
-  ScrollView,
 } from 'react-native';
 import { ItemAccount } from '../components/ItemAccount';
 import { useAccounts } from '../hooks/useAccounts';
@@ -18,25 +16,20 @@ export const AccountsScreen = () => {
   }
 
   return (
-    <ScrollView
-      refreshControl={
-        <RefreshControl refreshing={loading} onRefresh={fetchAccounts} />
-      }
-    >
-      <View style={styles.container}>
-        <FlatList
-          data={accounts}
-          renderItem={({ item }) => (
-            <ItemAccount
-              account={item}
-              onPress={() =>
-                navigation.navigate('AccountDetail', { account: item })
-              }
-            />
-          )}
-        />
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      <FlatList
+        data={accounts}
+        renderItem={({ item }) => (
+          <ItemAccount
+            account={item}
+            onPress={() =>
+              navigation.navigate('AccountDetail', { account: item })
+            }
+          />
+        )}
+        onRefresh={fetchAccounts}
+      />
+    </View>
   );
 };
 
