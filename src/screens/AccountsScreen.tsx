@@ -9,7 +9,7 @@ import { ItemAccount } from '../components/ItemAccount';
 import { useAccounts } from '../hooks/useAccounts';
 
 export const AccountsScreen = () => {
-  const { accounts, loading, navigation, fetchAccounts } = useAccounts();
+  const { accounts, loading, refreshing, navigation, refreshAccounts } = useAccounts();
 
   if (loading) {
     return <ActivityIndicator style={styles.center} color="#f4511e" />;
@@ -27,7 +27,8 @@ export const AccountsScreen = () => {
             }
           />
         )}
-        onRefresh={fetchAccounts}
+        refreshing={refreshing}
+        onRefresh={refreshAccounts}
       />
     </View>
   );

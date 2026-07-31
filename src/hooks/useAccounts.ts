@@ -14,19 +14,27 @@ export const useAccounts = () => {
   const [accounts, setAccounts] = useState<Account[]>([]);
 
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   const fetchAccounts = async () => {
     try {
       const data = await getAccounts();
       setAccounts(data);
     } catch (error) {
+      console.error(error);
+    } finally {
       setLoading(false);
+      setRefreshing(false);
     }
-    setLoading(false);
+  };
+
+  const refreshAccounts = async () => {
+    setRefreshing(true);
+    await fetchAccounts();
   };
 
   useEffect(() => {
     fetchAccounts();
   }, []);
-  return { accounts, loading, navigation, fetchAccounts };
+  return { accounts, loading, refreshing, navigation, refreshAccounts };
 };
