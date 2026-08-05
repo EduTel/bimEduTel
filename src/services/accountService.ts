@@ -1,9 +1,4 @@
-export interface Account {
-  id: number;
-  number: string;
-  type: string;
-  balance: number;
-}
+import { Account } from '../models/Account';
 
 export const getAccounts = async (): Promise<Account[]> => {
   return new Promise(resolve => {

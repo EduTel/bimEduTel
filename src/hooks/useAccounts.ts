@@ -1,7 +1,8 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
-import { Account, getAccounts } from '../services/accountService';
+import { getAccounts } from '../services/accountService';
+import { Account } from '../models/Account';
 
 type StackParamList = {
   Accounts: undefined;

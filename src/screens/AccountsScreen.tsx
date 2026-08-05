@@ -1,15 +1,11 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  FlatList,
-  ActivityIndicator,
-} from 'react-native';
-import { ItemAccount } from '../components/ItemAccount';
+import { View, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
+import { AccountCard } from '../components/AccountCard';
 import { useAccounts } from '../hooks/useAccounts';
 
 export const AccountsScreen = () => {
-  const { accounts, loading, refreshing, navigation, refreshAccounts } = useAccounts();
+  const { accounts, loading, refreshing, navigation, refreshAccounts } =
+    useAccounts();
 
   if (loading) {
     return <ActivityIndicator style={styles.center} color="#f4511e" />;
@@ -20,7 +16,7 @@ export const AccountsScreen = () => {
       <FlatList
         data={accounts}
         renderItem={({ item }) => (
-          <ItemAccount
+          <AccountCard
             account={item}
             onPress={() =>
               navigation.navigate('AccountDetail', { account: item })

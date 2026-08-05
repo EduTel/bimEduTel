@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { formatCurrency } from '../utils/currency';
-import { Account } from '../services/accountService';
+import { Account } from '../models/Account';
 
-export const ItemAccount = ({
+export const AccountCard = ({
   account,
   onPress,
 }: {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import { Account } from '../services/accountService';
 import { formatCurrency } from '../utils/currency';
+import { Account } from '../models/Account';
 
 type StackParam = {
   AccountDetail: { account: Account };
@@ -27,5 +27,3 @@ export const AccountDetail = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
